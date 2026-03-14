@@ -1,0 +1,27 @@
+{
+  "name": "langchain-demo",
+  "version": "1.0.0",
+  "description": "leran",
+  "license": "ISC",
+  "author": "muffin",
+  "type": "module",
+  "main": "src/langchain-ark-demo.ts",
+  "scripts": {
+    "demo": "node --experimental-strip-types src/langchain-ark-demo.ts",
+    "check": "node --experimental-strip-types --check src/langchain-ark-demo.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.76",
+    "@langchain/core": "^1.1.32",
+    "@langchain/openai": "^1.2.13",
+    "dotenv": "^17.3.1",
+    "langchain": "^1.2.32",
+    "langsmith": "^0.5.10",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
+}
