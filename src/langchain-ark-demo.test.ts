@@ -4,7 +4,7 @@ import {
   createTavilySearchTool,
   formatTavilySearchResponse,
   searchWithTavily,
-} from "./langchain-ark-demo.ts";
+} from "./tools/tavily-search-tool.ts";
 
 test("formatTavilySearchResponse should include answer and sources", () => {
   /** 格式化后的 Tavily 结果。 */
