@@ -18,6 +18,7 @@ npm install
 export ARK_API_KEY="your-ark-api-key"
 export ARK_CODING_MODEL="ark-code-latest"
 export ARK_BASE_URL="https://ark.cn-beijing.volces.com/api/coding/v3"
+export TAVILY_API_KEY="your-tavily-api-key"
 ```
 
 如果你使用 BytePlus 区域，可以把 `ARK_BASE_URL` 改成：
@@ -38,10 +39,18 @@ npm run demo
 npm run demo -- "Build a tiny React component plan for a pricing card."
 ```
 
+如果你希望 agent 能主动联网搜索，请确保设置了 `TAVILY_API_KEY`。当前 demo 注册了 `search_web` 工具，agent 可以通过 Tavily 获取最新网页信息。
+
 ## 类型检查
 
 ```bash
 npm run typecheck
+```
+
+## 测试
+
+```bash
+npm run test
 ```
 
 ## LangSmith Trace
@@ -68,5 +77,6 @@ LANGSMITH_ENDPOINT=https://api.smith.langchain.com
 - 注册了两个本地工具：
   - `inspect_project`
   - `suggest_tech_stack`
+  - `search_web`
 
 这样可以完整对应 LangChain quickstart 的核心结构：`model + tools + agent.invoke(...)`。

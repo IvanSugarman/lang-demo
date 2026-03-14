@@ -9,7 +9,8 @@
   "scripts": {
     "demo": "node --experimental-strip-types src/langchain-ark-demo.ts",
     "check": "node --experimental-strip-types --check src/langchain-ark-demo.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types src/langchain-ark-demo.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.76",
